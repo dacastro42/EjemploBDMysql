@@ -40,3 +40,4 @@ E:\Documents\uao\BD\ProjectcMysql\EjemploBDMysql\EjemploBDMysql\obj\Debug\Ejempl
 E:\Documents\uao\BD\ProjectcMysql\EjemploBDMysql\EjemploBDMysql\obj\Debug\EjemploBDMysql.csproj.CopyComplete
 E:\Documents\uao\BD\ProjectcMysql\EjemploBDMysql\EjemploBDMysql\obj\Debug\EjemploBDMysql.exe
 E:\Documents\uao\BD\ProjectcMysql\EjemploBDMysql\EjemploBDMysql\obj\Debug\EjemploBDMysql.pdb
+E:\Documents\uao\BD\ProjectcMysql\EjemploBDMysql\EjemploBDMysql\obj\Debug\EjemploBDMysql.Vista.UIDepartment.resources

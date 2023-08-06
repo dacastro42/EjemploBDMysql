@@ -98,18 +98,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\ControllerDepartment.cs" />
     <Compile Include="Controller\ControllerEmployee.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="model\Department.cs" />
+    <Compile Include="Vista\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Vista\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="model\ConnectionDAtaBase.cs" />
     <Compile Include="model\Employee.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Vista\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <Compile Include="Vista\UIDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\UIDepartment.Designer.cs">
+      <DependentUpon>UIDepartment.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Vista\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -121,6 +129,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vista\UIDepartment.resx">
+      <DependentUpon>UIDepartment.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

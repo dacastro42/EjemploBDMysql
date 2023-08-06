@@ -11,12 +11,10 @@ namespace EjemploBDMysql.model
     [DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]
     public class Employee
     {
+        private int idEmployee;
         private string nombre1E;
         private string nombre2E;
         private string apellido1E;
-
-       
-
         private string apellido2E;
         private string DirE;
         private string MailE;
@@ -38,6 +36,19 @@ namespace EjemploBDMysql.model
             this.telE = telE;
         }
 
+        public Employee(int idEmployee, string nombre1E, string nombre2E, string apellido1E, string apellido2E, string dirE, string mailE, string passWE, string telE)
+        {
+            this.idEmployee = idEmployee;
+            this.nombre1E = nombre1E;
+            this.nombre2E = nombre2E;
+            this.apellido1E = apellido1E;
+            this.apellido2E = apellido2E;
+            DirE = dirE;
+            MailE = mailE;
+            this.passWE = passWE;
+            this.telE = telE;
+        }
+
         public string Nombre1E { get => nombre1E; set => nombre1E = value; }
         public string Nombre2E { get => nombre2E; set => nombre2E = value; }
         public string Apellido1E { get => apellido1E; set => apellido1E = value; }
@@ -46,6 +57,7 @@ namespace EjemploBDMysql.model
         public string MailE1 { get => MailE; set => MailE = value; }
         public string PassWE { get => passWE; set => passWE = value; }
         public string TelE { get => telE; set => telE = value; }
+        public int IdEmployee { get => idEmployee; set => idEmployee = value; }
 
         private string GetDebuggerDisplay()
         {
@@ -63,7 +75,7 @@ namespace EjemploBDMysql.model
                 MySqlCommand cmd = new MySqlCommand(sql, objConection.DataSource());
                 objConection.ConnectOpened();
                 int i = cmd.ExecuteNonQuery();
-                Console.WriteLine("Si se realizó la coneción ");
+                Console.WriteLine("Si se realizó la conexión ");
                 objConection.ConnectClosed();
                 if (i>-1)
                 {
