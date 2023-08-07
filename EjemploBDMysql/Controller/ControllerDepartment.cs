@@ -7,7 +7,7 @@ using EjemploBDMysql.model;
 
 namespace EjemploBDMysql.Controller
 {
-    class ControllerDepartment
+    public class ControllerDepartment
     {
         public bool SendDepartment(Department objd)
         {
@@ -17,6 +17,15 @@ namespace EjemploBDMysql.Controller
             t = objd.SendDepartment(sql);
 
             return t;
+        }
+
+        public List<Department> ConsultarDepartment()
+        {
+            List<Department> LDepartment;
+            Department objD = new Department();
+            string sql = "select * from departments";
+            LDepartment = objD.ConsultarDepartamento(sql);
+            return LDepartment;
         }
     }
 }

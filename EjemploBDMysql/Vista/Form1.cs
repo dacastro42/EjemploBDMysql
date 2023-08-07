@@ -48,5 +48,15 @@ namespace EjemploBDMysql
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ControllerDepartment objc = new ControllerDepartment();
+            List<Department> listD = objc.ConsultarDepartment();
+            for(int i=0; i<listD.Count; i++)
+            {
+                comboBox1.Items.Add(listD[i].NameDepartment);
+            }
+        }
     }
 }

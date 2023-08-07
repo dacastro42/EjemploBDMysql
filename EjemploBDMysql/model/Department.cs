@@ -69,5 +69,39 @@ namespace EjemploBDMysql.model
 
             return t;
         }
+
+        public List<Department> ConsultarDepartamento(string sql)
+        {
+            List<Department> listD = new List<Department>();
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, objConection.DataSource());
+                objConection.ConnectOpened();
+                MySqlDataReader reader=cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        int idD = reader.GetInt32(0);
+                        string nameD = reader.GetString(1);
+                        listD.Add(new Department(idD, nameD));
+                    }
+                }
+
+
+            }
+            catch (Exception w)
+            {
+                Console.WriteLine("ERROOOOOOR " + w.Message);
+                objConection.ConnectClosed();
+            }
+            finally
+            {
+                objConection.ConnectClosed();
+            }
+
+
+            return listD;
+        }
     }
 }

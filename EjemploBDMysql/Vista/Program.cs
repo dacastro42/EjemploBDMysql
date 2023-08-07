@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EjemploBDMysql.Vista;
-
+using EjemploBDMysql;
     static class Program
     {
         /// <summary>
@@ -15,7 +15,7 @@ using EjemploBDMysql.Vista;
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UIDepartment()); //Form1());
-        }
+            Application.Run(new Form1()); //UIDepartment()); 
+    }
     }
 
